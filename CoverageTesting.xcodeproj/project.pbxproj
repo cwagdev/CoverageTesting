@@ -21,6 +21,9 @@
 		075591431922E2A000C2C7B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 075591251922E2A000C2C7B7 /* UIKit.framework */; };
 		0755914B1922E2A000C2C7B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 075591491922E2A000C2C7B7 /* InfoPlist.strings */; };
 		0755914D1922E2A000C2C7B7 /* CoverageTestingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0755914C1922E2A000C2C7B7 /* CoverageTestingTests.m */; };
+		075591581922E2CF00C2C7B7 /* CWDCalculatorService.m in Sources */ = {isa = PBXBuildFile; fileRef = 075591571922E2CF00C2C7B7 /* CWDCalculatorService.m */; };
+		075591591922E2CF00C2C7B7 /* CWDCalculatorService.m in Sources */ = {isa = PBXBuildFile; fileRef = 075591571922E2CF00C2C7B7 /* CWDCalculatorService.m */; };
+		0755915B1922E34B00C2C7B7 /* CWDCalculatorServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0755915A1922E34B00C2C7B7 /* CWDCalculatorServiceTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		075591481922E2A000C2C7B7 /* CoverageTestingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoverageTestingTests-Info.plist"; sourceTree = "<group>"; };
 		0755914A1922E2A000C2C7B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0755914C1922E2A000C2C7B7 /* CoverageTestingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoverageTestingTests.m; sourceTree = "<group>"; };
+		075591561922E2CF00C2C7B7 /* CWDCalculatorService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWDCalculatorService.h; sourceTree = "<group>"; };
+		075591571922E2CF00C2C7B7 /* CWDCalculatorService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWDCalculatorService.m; sourceTree = "<group>"; };
+		0755915A1922E34B00C2C7B7 /* CWDCalculatorServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWDCalculatorServiceTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,8 @@
 				075591371922E2A000C2C7B7 /* CWDViewController.m */,
 				075591391922E2A000C2C7B7 /* Images.xcassets */,
 				075591281922E2A000C2C7B7 /* Supporting Files */,
+				075591561922E2CF00C2C7B7 /* CWDCalculatorService.h */,
+				075591571922E2CF00C2C7B7 /* CWDCalculatorService.m */,
 			);
 			path = CoverageTesting;
 			sourceTree = "<group>";
@@ -139,6 +147,7 @@
 			children = (
 				0755914C1922E2A000C2C7B7 /* CoverageTestingTests.m */,
 				075591471922E2A000C2C7B7 /* Supporting Files */,
+				0755915A1922E34B00C2C7B7 /* CWDCalculatorServiceTests.m */,
 			);
 			path = CoverageTestingTests;
 			sourceTree = "<group>";
@@ -162,6 +171,7 @@
 				0755911A1922E2A000C2C7B7 /* Sources */,
 				0755911B1922E2A000C2C7B7 /* Frameworks */,
 				0755911C1922E2A000C2C7B7 /* Resources */,
+				0755915C1922E52300C2C7B7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -244,6 +254,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0755915C1922E52300C2C7B7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = XcodeCoverage/exportenv.sh;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0755911A1922E2A000C2C7B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -251,6 +277,7 @@
 			files = (
 				0755912E1922E2A000C2C7B7 /* main.m in Sources */,
 				075591381922E2A000C2C7B7 /* CWDViewController.m in Sources */,
+				075591581922E2CF00C2C7B7 /* CWDCalculatorService.m in Sources */,
 				075591321922E2A000C2C7B7 /* CWDAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +286,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0755915B1922E34B00C2C7B7 /* CWDCalculatorServiceTests.m in Sources */,
+				075591591922E2CF00C2C7B7 /* CWDCalculatorService.m in Sources */,
 				0755914D1922E2A000C2C7B7 /* CoverageTestingTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,6 +350,8 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
