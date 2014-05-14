@@ -24,6 +24,9 @@
 		075591581922E2CF00C2C7B7 /* CWDCalculatorService.m in Sources */ = {isa = PBXBuildFile; fileRef = 075591571922E2CF00C2C7B7 /* CWDCalculatorService.m */; };
 		075591591922E2CF00C2C7B7 /* CWDCalculatorService.m in Sources */ = {isa = PBXBuildFile; fileRef = 075591571922E2CF00C2C7B7 /* CWDCalculatorService.m */; };
 		0755915B1922E34B00C2C7B7 /* CWDCalculatorServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0755915A1922E34B00C2C7B7 /* CWDCalculatorServiceTests.m */; };
+		0755915F1922EAAA00C2C7B7 /* GTMCodeCoverageTestsXC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0755915D1922EAAA00C2C7B7 /* GTMCodeCoverageTestsXC.m */; };
+		075591621922EAB500C2C7B7 /* GTMCodeCoverageApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 075591601922EAB500C2C7B7 /* GTMCodeCoverageApp.m */; };
+		075591631922EAB500C2C7B7 /* GTMCodeCoverageApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 075591601922EAB500C2C7B7 /* GTMCodeCoverageApp.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		075591561922E2CF00C2C7B7 /* CWDCalculatorService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWDCalculatorService.h; sourceTree = "<group>"; };
 		075591571922E2CF00C2C7B7 /* CWDCalculatorService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWDCalculatorService.m; sourceTree = "<group>"; };
 		0755915A1922E34B00C2C7B7 /* CWDCalculatorServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWDCalculatorServiceTests.m; sourceTree = "<group>"; };
+		0755915D1922EAAA00C2C7B7 /* GTMCodeCoverageTestsXC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMCodeCoverageTestsXC.m; sourceTree = "<group>"; };
+		075591601922EAB500C2C7B7 /* GTMCodeCoverageApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMCodeCoverageApp.m; sourceTree = "<group>"; };
+		075591611922EAB500C2C7B7 /* GTMCodeCoverageApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMCodeCoverageApp.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,8 @@
 		075591271922E2A000C2C7B7 /* CoverageTesting */ = {
 			isa = PBXGroup;
 			children = (
+				075591601922EAB500C2C7B7 /* GTMCodeCoverageApp.m */,
+				075591611922EAB500C2C7B7 /* GTMCodeCoverageApp.h */,
 				075591301922E2A000C2C7B7 /* CWDAppDelegate.h */,
 				075591311922E2A000C2C7B7 /* CWDAppDelegate.m */,
 				075591331922E2A000C2C7B7 /* Main.storyboard */,
@@ -145,6 +153,7 @@
 		075591461922E2A000C2C7B7 /* CoverageTestingTests */ = {
 			isa = PBXGroup;
 			children = (
+				0755915D1922EAAA00C2C7B7 /* GTMCodeCoverageTestsXC.m */,
 				0755914C1922E2A000C2C7B7 /* CoverageTestingTests.m */,
 				075591471922E2A000C2C7B7 /* Supporting Files */,
 				0755915A1922E34B00C2C7B7 /* CWDCalculatorServiceTests.m */,
@@ -279,6 +288,7 @@
 				075591381922E2A000C2C7B7 /* CWDViewController.m in Sources */,
 				075591581922E2CF00C2C7B7 /* CWDCalculatorService.m in Sources */,
 				075591321922E2A000C2C7B7 /* CWDAppDelegate.m in Sources */,
+				075591621922EAB500C2C7B7 /* GTMCodeCoverageApp.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +296,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0755915F1922EAAA00C2C7B7 /* GTMCodeCoverageTestsXC.m in Sources */,
+				075591631922EAB500C2C7B7 /* GTMCodeCoverageApp.m in Sources */,
 				0755915B1922E34B00C2C7B7 /* CWDCalculatorServiceTests.m in Sources */,
 				075591591922E2CF00C2C7B7 /* CWDCalculatorService.m in Sources */,
 				0755914D1922E2A000C2C7B7 /* CoverageTestingTests.m in Sources */,
@@ -409,6 +421,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CoverageTesting/CoverageTesting-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					GTM_IS_COVERAGE_BUILD,
+					GTM_USING_XCTEST,
+				);
 				INFOPLIST_FILE = "CoverageTesting/CoverageTesting-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -442,6 +460,8 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
+					GTM_IS_COVERAGE_BUILD,
+					GTM_USING_XCTEST,
 				);
 				INFOPLIST_FILE = "CoverageTestingTests/CoverageTestingTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
